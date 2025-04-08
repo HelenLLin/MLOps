@@ -1,35 +1,30 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python src/create_features.py
+    cmd: python src/preprocessing.py
     deps:
-    - path: data/adult.data
+    - path: data/life_expectancy.csv
       hash: md5
-      md5: 5d7c39d7b8804f071cdd1f2a7c460872
-      size: 3974305
-    - path: data/adult.test
+      md5: 796c4bae5e20a09cbefe6a7cda09a20c
+      size: 333442
+    - path: src/preprocessing.py
       hash: md5
-      md5: 366c746021dc50ad9d933d2817612fc9
-      size: 2003132
-    - path: src/create_features.py
-      hash: md5
-      md5: 743df2e53aba70f18388ebb71697a906
-      size: 2688
+      md5: 71e321c2a8b8f078af48442733d39b1d
+      size: 3289
     params:
       params.yaml:
         features.chi2percentile: 50
-        features.test_path: data/adult.test
-        features.train_path: data/adult.data
+        features.data_path: data/life_expectancy.csv
     outs:
     - path: data/pipeline.pkl
       hash: md5
-      md5: 696623db8ea5c43de6f86684ce3d300e
-      size: 6072
+      md5: 338a169b79f59bf5d6da654f941d64cd
+      size: 3483
     - path: data/processed_test_data.csv
       hash: md5
-      md5: a59c8daac38fe1ca84dda2b458ee762a
-      size: 5409602
+      md5: 22bccef92d300dcbed09cb0aa22fe2fa
+      size: 226837
     - path: data/processed_train_data.csv
       hash: md5
-      md5: adf63b6ce20f7ee74f63d5dabb325226
-      size: 10829967
+      md5: 9f069a023931712d7f15eb30454e3fa8
+      size: 913789
