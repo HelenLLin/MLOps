@@ -1,6 +1,7 @@
-data
+# data
 labs/lab2/mlruns
 labs/lab2/images
 labs/lab2/save_data
 labs/lab2/models
 labs/lab2/mlflow.db
+src/__pycache__
