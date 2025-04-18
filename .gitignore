@@ -5,5 +5,5 @@ labs/lab2/save_data
 labs/lab2/models
 labs/lab2/mlflow.db
 src/__pycache__
-
-labs/lab4/app
+src/.metaflow
+src/mlruns
