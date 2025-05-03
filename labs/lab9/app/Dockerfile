@@ -12,5 +12,4 @@ COPY [ "reddit_model_pipeline.joblib", "redditApp.py", "./"]
 
 EXPOSE 8000
 
-# --host=0.0.0.0 is necessary when using uvicorn inside a docker container so that you can connect to localhost or 127.0.0.1 from outside of container
 ENTRYPOINT ["uvicorn", "redditApp:app", "--host", "0.0.0.0"]
